@@ -1,0 +1,35 @@
+/* Reset some default styles */
+body, div {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the latest releases section */
+.latest-releases-section {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the movie cards */
+.movie-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    max-width: 300px;
+}
+
+.movie-card img {
+    max-width: 100%;
+}
+
+.movie-card h3 {
+    margin-top: 10px;
+}
+
+.movie-card p {
+    color: #777;
+}
