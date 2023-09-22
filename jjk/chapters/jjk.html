@@ -2,26 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Page</title>
-
+    <title>Mobile-Friendly PDF Viewer</title>
     <link
-  rel="stylesheet"
-  href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-/>
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+  />
+  
+  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  
+      <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add your CSS styles here */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
+        li {
+            margin-bottom: 10px;
+        }
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        .pdf-container {
+            display: none; /* Hide the PDF initially */
+            position: relative;
+            padding-bottom: 100%; /* Set an aspect ratio for the container */
+            height: 0;
+            overflow: hidden;
+        }
 
+        .pdf-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-    <link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-<style>
-  body {
-    background-image: url('/images/jjk.png'); /* Replace 'bg.jpg' with the path to your background image */
+        .chapter-heading {
+            cursor: pointer;
+            text-decoration: underline;
+            color: rgb(6, 201, 255);
+        }
+        body {
+    background-image: url('./images/soloo.png'); /* Replace 'bg.jpg' with the path to your background image */
     background-size: cover; /* Adjust the size of the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-attachment: fixed; /* Keep the image fixed in place as the page scrolls */
@@ -32,82 +58,62 @@
 h1 {
     color: white; /* Set text color to contrast with the background */
 }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <h2 class="chapter-heading" onclick="togglePdf('pdf-1')">Chapter 1</h2>
+            <div class="pdf-container" id="pdf-1">
+                <iframe src="./images/solo1.pdf" width="100%" height="100%" name="pdf-frame"></iframe>
+            </div>
+        </li>
+        <li>
+            <h2 class="chapter-heading" onclick="togglePdf('pdf-2')">Chapter 2</h2>
+            <div class="pdf-container" id="pdf-2">
+                <iframe src="./images/solo1.pdf" width="100%" height="100%" name="pdf-frame"></iframe>
+            </div>
+        </li>
+        <!-- Add more chapter links -->
+    </ul>
+    <iframe name="pdf-frame" src="" frameborder="0"></iframe>
+    <h1 class="centered-hover"><a href="watch.html">READ SLIDE-BY-SLIDE</a></h1>
 
-</style>
-
-    <header>
-        <a href="/index.html" class="logo"><i class="fas fa-infinity"></i>ManBrary</a>
-        <nav class="navbar">
-             <a class="active" href="/index.html">back to home</a>
-             
-             
-        </nav>
-        
-    </header>
-
-    <style>
-        /* Define custom colors for the chapters */
-        .pdf-container-link:nth-child(odd) h2 {
-          color: #3498db; /* Change this to your desired color for odd chapters */
+    <script>
+        function togglePdf(pdfId) {
+            const pdfContainer = document.getElementById(pdfId);
+            if (pdfContainer.style.display === "none") {
+                pdfContainer.style.display = "block";
+            } else {
+                pdfContainer.style.display = "none";
+            }
         }
-      
-        .pdf-container-link:nth-child(even) h2 {
-          color: #e74c3c; /* Change this to your desired color for even chapters */
-        }
-      
-        /* Hover effect for chapter links */
-        .pdf-container-link h2:hover {
-          text-decoration: underline; /* Underline the text on hover */
-        }
-      </style>
-    <div id="pdf-container">
-      <h1>JUJUTSU KAISEN</h1>
-      <ul>
-          <li><a href="/images/solo1.pdf " target="pdf-frame"><h2>Chapter 1</h2></a></li>
-          <li><a href="/op.pdf" target="pdf-frame"><h2>Chapter 2</h2></a></li>
-          <li><a href="/op.pdf" target="pdf-frame"><h2>Chapter 3</h2></a></li>
-          <li><a href="/op.pdf" target="pdf-frame"><h2>Chapter 4</h2></a></li>
-          <li><a href="/op.pdf" target="pdf-frame"><h2>Chapter 5</h2></a></li>
-          <li><a href="/op.pdf" target="pdf-frame"><h2>Chapter 6</h2></a></li>
-          <li><a href="/op.pdf" target="pdf-frame"><h2>Chapter 7</h2></a></li>
-          <li><a href="/op.pdf" target="pdf-frame"><h2>Chapter 8</h2></a></li>
-          <!-- <li><a href="/op.pdf" target="pdf-frame"><h2>Chapter 2</h2></a></li>
-          <li><a href="/op.pdf" target="pdf-frame"><h2>Chapter 2</h2></a></li>
-          <li><a href="/op.pdf" target="pdf-frame"><h2>Chapter 2</h2></a></li> -->
-          <!-- Add more chapter links -->
-      </ul>
-      <iframe name="pdf-frame" src="" frameborder="0"></iframe>
-      <h1 class="centered-hover"><a href="watch.html">READ SLIDE-BY-SLIDE</a></h1>
+    </script>
+    <div class="about container">
+      <h2>ABOUT SOLO-LEVELING</h2>
+      <p>High roller Yumeko Jabami plans to clean house at Hyakkaou Private<br>
+        Academy, a school where students are evaluated solely on their<br>
+        gambling skills.
+      </p>
   </div>
-<div class="about container">
-    <h2>ABOUT JUJUTSU KAISEN</h2>
-    <p>Jujutsu Kaisen is a Japanese manga series written and illustrated by Gege Akutami. It has been serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since March 2018, with its chapters collected and published in 23 tankōbon volumes as of July 2023.
-    </p>
-</div>
-
-
-
-<div class="screenshots container">
-<h2>Highlights</h2>
-<div class="screenshots-content">
-    <img decoding="async" src="/images/acion-5.jpg" alt="">
-    <img decoding="async" src="/images/acion-5.jpg" alt="">
-    <img decoding="async" src="/images/acion-5.jpg" alt="">
-</div>
-</div>
-
-
-<div class="download">
-    <h2>Download links</h2>
-    <div class="downlod-links">
-        <a href="#">For Android</a>
-        <a href="#">For IOS</a>
-        <a href="#">For Windows</a>
-    </div>
-</div>
-
-
-<div class="copyright container">
-    <a href="/index.html" class="logo"><i class="fas fa-infinity"></i>ManBrary</a>
-    <p>&#169; ManBrary. All rights reserved.</p>
-</div>
+  
+  
+  
+  <div class="screenshots container">
+  <h2>Highlights</h2>
+  <div class="screenshots-content">
+      <img decoding="async" src="./images/zoro.png" alt="">
+      <img decoding="async" src="./images/zoro.png" alt="">
+      <img decoding="async" src="./images/zoro.png" alt="">
+  </div>
+  </div>
+  
+  
+  
+  
+  <div class="copyright container">
+      <a href="/index.html" class="logo"><i class="fas fa-infinity"></i>ManBrary</a>
+      <p>&#169; ManBrary. All rights reserved.</p>
+  </div>
+</body>
+</html>
