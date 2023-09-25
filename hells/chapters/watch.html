@@ -338,15 +338,31 @@ function showSlides(n) {
 </div>
 
 
-
 <div class="screenshots container">
-<h2>Highlights</h2>
-<div class="screenshots-content">
-  <img decoding="async" src="./images/zoro.png" alt="">
-  <img decoding="async" src="./images/zoro.png" alt="">
-  <img decoding="async" src="./images/zoro.png" alt="">
-</div>
-</div>
+  <h2>Highlights</h2>
+  <div class="screenshots-content">
+    <video id="myVideo" controls autoplay loop>
+      <source src="/images/jjk.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      <button onclick="toggleMute()">Mute/Unmute</button>
+  
+  </video>
+  
+  </div>
+  </div>
+  
+  <script>
+    const video = document.getElementById("myVideo");
+    
+    function toggleMute() {
+        if (video.muted) {
+            video.muted = false;
+        } else {
+            video.muted = true;
+        }
+    }
+  </script>
+  
 
 <div class="download">
   <h2>Download links</h2>

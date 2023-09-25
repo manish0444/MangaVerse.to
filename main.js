@@ -89,3 +89,36 @@ var swiper = new Swiper(".home-slider", {
     var navbar = document.querySelector(".navbar");
     navbar.classList.toggle("active");
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("searchInput");
+    const contentBanners = document.getElementById("Banners-container");
+
+    // Store the original content
+    const originalContent = Array.from(contentBanners.children);
+
+    // Function to filter and display content based on search term
+    function filterContent(searchTerm) {
+        contentBanners.innerHTML = '';
+
+        originalContent.forEach(item => {
+            const showName = item.querySelector('.show-name').textContent.toLowerCase();
+            if (showName.includes(searchTerm.toLowerCase())) {
+                contentBanners.appendChild(item.cloneNode(true));
+            }
+        });
+    }
+
+    // Event listener for the search button click
+    document.getElementById("searchButton").addEventListener("click", function () {
+        const searchTerm = searchInput.value;
+        filterContent(searchTerm);
+    });
+
+    // Event listener for input changes
+    searchInput.addEventListener("input", function () {
+        const searchTerm = searchInput.value;
+        filterContent(searchTerm);
+    });
+});
