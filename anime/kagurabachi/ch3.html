@@ -240,51 +240,51 @@
      <span class="dot" onclick="currentSlide(20)"></span> 
   </div>
 <script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
+ let slideIndex = 1;
+        showSlides(slideIndex);
 
-  function plusSlides(n) {
-      showSlides(slideIndex += n);
-  }
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
 
-  function currentSlide(n) {
-      showSlides(slideIndex = n);
-  }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
 
-  function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) { slideIndex = 1; }
-      if (n < 1) { slideIndex = slides.length; }
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-  }
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
 
-  let touchStartX = 0;
-  let touchEndX = 0;
-  const MIN_TOUCH_DISTANCE = 50;
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const MIN_TOUCH_DISTANCE = 50;
 
-  document.addEventListener('touchstart', (e) => {
-      touchStartX = e.touches[0].clientX;
-  });
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        });
 
-  document.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].clientX;
-      const touchDistance = touchEndX - touchStartX;
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].clientX;
+            const touchDistance = touchEndX - touchStartX;
 
-      if (touchDistance > MIN_TOUCH_DISTANCE) {
-          plusSlides(-1); // Swipe right (previous)
-      } else if (touchDistance < -MIN_TOUCH_DISTANCE) {
-          plusSlides(1); // Swipe left (next)
-      }
-  });
+            if (touchDistance > MIN_TOUCH_DISTANCE) {
+                plusSlides(1); // Swipe right (previous)
+            } else if (touchDistance < -MIN_TOUCH_DISTANCE) {
+                plusSlides(-1); // Swipe left (next)
+            }
+        });
 </script>
 
 <style>
