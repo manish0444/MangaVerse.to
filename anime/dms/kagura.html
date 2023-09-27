@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile-Friendly PDF Viewer</title>
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+  />
+  
+  
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  
+      <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add your CSS styles here */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .pdf-container {
+            display: none; /* Hide the PDF initially */
+            position: relative;
+            padding-bottom: 100%; /* Set an aspect ratio for the container */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .pdf-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .chapter-heading {
+            cursor: pointer;
+            text-decoration: underline;
+            color: rgb(6, 201, 255);
+        }
+   
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <h2 class="chapter-heading" onclick="togglePdf('pdf-1')">Chapter 1</h2>
+            <div class="pdf-container" id="pdf-1">
+                <iframe src="./images/solo1.pdf" width="100%" height="100%" name="pdf-frame"></iframe>
+            </div>
+        </li>
+        <li>
+            <h2 class="chapter-heading" onclick="togglePdf('pdf-2')">Chapter 2</h2>
+            <div class="pdf-container" id="pdf-2">
+                <iframe src="./images/solo1.pdf" width="100%" height="100%" name="pdf-frame"></iframe>
+            </div>
+        </li>
+        <!-- Add more chapter links -->
+    </ul>
+    <iframe name="pdf-frame" src="" frameborder="0"></iframe>
+    <h1 class="centered-hover"><a href="watch.html">READ SLIDE-BY-SLIDE</a></h1>
+
+    <script>
+        function togglePdf(pdfId) {
+            const pdfContainer = document.getElementById(pdfId);
+            if (pdfContainer.style.display === "none") {
+                pdfContainer.style.display = "block";
+            } else {
+                pdfContainer.style.display = "none";
+            }
+        }
+    </script>
+    <div class="about container">
+      <h2>ABOUT KAGURABACHI</h2>
+      <p>Young Chihiro spends his days training under his famous swordsmith father. One day he hopes to become a great sword-maker himself. The goofy father and the serious son—they thought these days would last forever. But suddenly, tragedy strikes. A dark day soaked in blood. Chihiro and his blade now live only for revenge. Epic sword battle action!
+      </p>
+  </div>
+  
+  
+  
+  <div class="screenshots container">
+  <h2>Highlights</h2>
+  <div class="screenshots-content">
+    <video id="myVideo" controls autoplay loop>
+        <source src="/images/jjk.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        <button onclick="toggleMute()">Mute/Unmute</button>
+
+    </video>
+  </div>
+  </div>
+  
+  
+  
+  <script>
+    const video = document.getElementById("myVideo");
+    
+    function toggleMute() {
+        if (video.muted) {
+            video.muted = false;
+        } else {
+            video.muted = true;
+        }
+    }
+</script>
+
+  <div class="copyright container">
+      <a href="/index.html" class="logo"><i class="fas fa-infinity"></i>ManBrary</a>
+      <p>&#169; ManBrary. All rights reserved.</p>
+  </div>
+</body>
+</html>
