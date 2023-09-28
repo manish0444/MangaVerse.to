@@ -466,6 +466,13 @@ img {vertical-align: middle;}
     } else if (touchDistance < -MIN_TOUCH_DISTANCE) {
       plusSlides(1); // Swipe left (next)
     }
+
+    // Loop the slideshow if at the beginning or end
+    if (slideIndex === 1 && touchDistance > MIN_TOUCH_DISTANCE) {
+      plusSlides(slides.length - 1);
+    } else if (slideIndex === slides.length && touchDistance < -MIN_TOUCH_DISTANCE) {
+      plusSlides(1);
+    }
   });
 
   // Function to toggle visibility and dark mode
