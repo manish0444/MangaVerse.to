@@ -11,6 +11,7 @@ Copyright: ©MdRasen */
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+ 
 }
 
 html {
@@ -529,12 +530,15 @@ img {
 @media (max-width: 900px) {
   .nav-menu .fa-solid {
     display: block;
-    color:#14113c;
+    color:#9100d4;
     font-size: 20px;
   }
 
   .nav-menu ul {
-    background-color: #8059f8;
+    background: linear-gradient(#07003eed, #1a0021),
+    url(images/zorogirl.png);
+    background-size: cover;
+  background-position: center;
     position: fixed;
     top: 0;
     right: -200px;
