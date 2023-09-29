@@ -85,7 +85,7 @@ img {
 #header .header-bottom {
   height: 100vh;
   background: linear-gradient(#07003eed, #1a0021),
-    url(assets/user-bg.jpg);
+    url(images/zorogirl.png);
   background-size: cover;
   background-position: center;
   color: #fff;

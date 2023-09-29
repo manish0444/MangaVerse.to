@@ -20,7 +20,10 @@
     transition: all .2s linear;
 }
 body{
-    background-color: #284962;
+    background: linear-gradient(#07003eed, #1a0021),
+    url(manga/1/Image-to-PDF-20230927-15.50.22-1.jpg);
+    background-size: cover;
+  background-position: center;
 }
 
 html{
