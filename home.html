@@ -1,132 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
-    <title>MangaVerse Homepage</title>
-</head>
-<body>
-
-
-</div>
-
-    <div class="bg-image"></div>
-    <header>
-        <h1>MangaVerse</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="category.html">Categories</a></li>
-                <li><a href="latest.html">Latest Releases</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+ 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website | devRasen</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+    <!-- FontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header section -->
+      <section id="header">
+        <div class="header-top">
+          <div class="logo">
+            <a href="home.html">
+              <i class="fas fa-infinity"></i>
+              <span>Manga</span>
+          
+              Verse
+            </a>
             
-        </nav>
-        
-    </header>
-    <style>
-      
-
-        .container {
-            position: relative;
-        }
-
-        .login-btn {
-            position: absolute;
-            top: 10px; /* Adjust the top distance as needed */
-            right: 10px; /* Adjust the right distance as needed */
-            background-color: #007bff;
-            color: #4d04d4;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 50px;
-            cursor: pointer;
-        }
-
-        .image-section {
-            position: relative;
-            text-align: center;
-            background-color: #fff; /* Adjust the background color as needed */
-            padding: 20px;
-        }
-
-        .image {
-            max-width: 100%;
-            height: auto;
-        }
-
-    </style>
-    <a href="login/login.html">
-        <button class="login-btn" id="login-btn">LOG IN</button>
-    </a>
-    <div class="blur-bg-overlay"> 
-    </div>
-    
-   
-        
+          </div>
+          <div class="nav-menu">
+            <ul id="sidemenu">
+              <li><a href="home.html">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <!-- <li><a href="#service">Services</a></li> -->
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#testimonial">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+          </div>
         </div>
-        <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
-        <script src="home.js"></script>
-    <main>
+        <div class="header-bottom">
+          <div class="bottom-left">
+            <h1 class="name">Manga <span>Verse</span></h1>
+            <h3 class="profession">-Free manga</h3>
+            <p class="short-desc">
+              Welcome to Mangaverse, your go-to hub for all things manga! Explore diverse manga reviews, recommendations, and join a vibrant community. Whether you're new to manga or a seasoned fan, dive into captivating stories and stunning art. Celebrate manga's artistry with us - your gateway to endless adventures!
+            </p>
+            <a href="index.html"  class="btn-cv" 
+              >START WATCHING</a
+            >
+          </div>
+          <div class="bottom-right">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </section>
+      <!-- About section -->
+      <section id="about">
+        <div class="about-left">
+          <img src="images/gojo.jpg" alt="user-sideimg" />
+        </div>
+        <div class="about-right">
+          <div class="section-title">
+            <h2 class="sub-title">About Us</h2>
+            <h3 class="title">Manga Verse </h3>
+          </div>
+          <p class="desc">
+            At Mangaverse, we're passionate about manga and dedicated to sharing our love for this incredible art form with fellow enthusiasts like you. Our mission is to create a welcoming and informative space where manga fans from all walks of life can come together to celebrate their shared passion.
+          </p>
+          <h2>ABOUT US:</h2>
+          <div class="tab-titles">
+          
+            <p class="tab-links active-link" onclick="openTab('Our Vision')">
+              Our Vision
+            </p>
+            <p class="tab-links" onclick="openTab('Our Mission')">Our Mission</p>
+            <p class="tab-links" onclick="openTab('Our Team')">Our Team</p>
+          </div>
+          <div class="tab-contents active-tab" id="Our Vision">
+            <ul>
+              <li>
+                <span>Passion for Manga: </span><br />At Mangaverse, our team is bound by a shared passion for manga. We believe in the power of manga to inspire, entertain, and connect people from diverse backgrounds. Our vision is to create a space where this passion can flourish.
+
+
+              </li>
+              <li><span>Community-Centric Approach: </span><br />Our vision extends beyond content creation; it encompasses building a thriving community of manga enthusiasts. We're dedicated to fostering a welcoming environment where readers can engage, share, and learn from one another.</li>
+              <li><span>Inclusivity: </span><br /> We're committed to inclusivity and diversity. Our vision is to embrace all genres, styles, and perspectives within manga. We aim to create a platform where manga lovers of all backgrounds feel represented and valued.
+
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="Our Mission">
+            <ul>
+              <li>
+                <span>Exploration and Discovery:</span><br />
+                Our mission is to introduce readers to the vast and diverse world of manga. We curate recommendations and provide reviews to help readers explore new titles and genres they may not have encountered otherwise.
+              </li>
+              <li>
+                <span>Education and Insight: </span><br /> We believe that manga is not just entertainment but also a medium for reflection and understanding. Our mission includes offering in-depth analysis and articles that provide insight into the deeper themes and artistic qualities of manga.
+                News
+              </li>
+              <li>
+                <span>Engagement and Connection: </span><br />We aim to facilitate meaningful connections among manga enthusiasts. Our mission is to create opportunities for readers to engage in discussions, share their thoughts, and connect with like-minded individuals who share their passion for manga.
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="Our Team">
+            <ul>
+              <li>
+                <span>Diverse Expertise:</span><br /> Our team comprises individuals with diverse tastes and backgrounds within the world of manga. We bring together a wealth of knowledge, allowing us to provide a broad spectrum of content, from shonen and shoujo to seinen and josei.
+
+
         
-        <section class="featured-manga">
-            <h2>MangaVerse- Read Manga/manhwa Online Free</h2>
-            <p>MangaVerse is a remarkable online platform that offers manga and manhwa enthusiasts a gateway to a world of captivating stories and vibrant illustrations, all accessible for free. With an extensive library of titles spanning various genres, from action and romance to fantasy and drama, MangaVerse caters to the diverse tastes of readers around the globe. Users can immerse themselves in the pages of their favorite comics, exploring intricate plotlines and getting lost in the artistry of each panel. This platform not only fosters a love for Japanese manga and Korean manhwa but also fosters a sense of community, as fans can discuss, share, and discover new series, making MangaVerse a treasure trove for manga and manhwa aficionados seeking endless entertainment and connection.
-        </section>
-        <section class="latest-releases">
-            <h2>How To Read Manga online?</h2>
-            <p>Reading manga online has become incredibly convenient with platforms like MangaVerse. To read manga online through MangaVerse: 
-                <li>
-                    Visit the MangaVerse Website: Start by opening your web browser and navigating to the MangaVerse website (www.MangaVerse.com).</li>
-                    <li>Browse the Manga Collection: MangaVerse boasts an extensive collection of manga and manhwa titles. Use the search bar or browse through genres to find the series you're interested in.</li>
-                   <li>Select a Manga: Click on the manga title or cover image to access the series. MangaVerse typically provides a detailed page for each manga, including a synopsis and cover art.</li> 
-              <li>Begin Reading: Scroll down to start reading the manga online. MangaVerse offers a user-friendly reading interface that allows you to navigate through chapters and pages with ease. You can typically use arrow keys or on-screen navigation buttons to flip pages.</li>
-           <li>Enjoy Additional Features: MangaVerse often provides features like bookmarking your favorite series, commenting on chapters, and interacting with other readers. Explore these features to enhance your manga reading experience.</li>
-                    <li>Stay Updated: To stay updated on new chapters or series releases, create an account on MangaVerse and subscribe to your favorite manga titles. You'll receive notifications when new content is available.</li>
-<li>Support the Creators: While MangaVerse offers free access to manga, consider supporting creators and publishers by purchasing official manga volumes when they become available in your region.</li>
-<li>Interact with the Community: Engage with fellow manga enthusiasts by joining discussions, sharing your thoughts on chapters, and discovering recommendations from the MangaVerse community.</li>
-MangaVerse provides a convenient and enjoyable platform for manga enthusiasts to dive into the world of manga and manhwa, fostering a vibrant community of readers. With its user-friendly interface and a vast collection of titles, MangaVerse is your gateway to hours of captivating storytelling and beautifully illustrated adventures in the realm of manga. 
-</p>
-        </section>
-        <section class="latest-releases">
-            <h2>Where To Read Manga For Free?</h2>
-            <p>If you're looking to read manga for free online, MangaVerse is an excellent platform to consider. MangaVerse offers a vast collection of manga and manhwa titles that you can access without any cost. You can visit the MangaVerse website at www.MangaVerse.com to explore a wide range of genres and discover your favorite manga series. While MangaVerse is a great option, please remember to support manga creators and publishers by purchasing official volumes when they become available in your region.</p>
-        </section>
-        <section class="latest-releases">
-            <h2>What is MangaVerse</h2>
-            <p>MangaVerse is an ad-free manga site that allows users to read and download thousands of manga for free. MangaVerse has one of the largest databases of manga covering all genres and subgenres with numerous topics and themes. Apart from an extensive content library, MangaVerse also provides free users with premium quality features that might be costly elsewhere.
-    
-                Reading manga online for free on MangaVerse is as easy as searching on Google. All you need to do is to visit the site link https://MangaVerse.to/, use the search bar to look for the manga of interest, click the Start Reading button and you are all set. There is no limit applied; therefore, you can enjoy as much manga as you wish without any worries. Here is a detailed list of the features provided for free on the site:
-                
-               <li> Free of charge.</li>
-                <li>Safe to use.</li>
-                <li>Various genres and subgenres.</li>
-                <li>High-quality scans.</li>
-               <li> Anti-overload with back-up server.</li>
-               <li> Fast content updates.</li>
-                <li>Zero ads and pop-ups.</li>
-                <li>Surpass Geo-restrictions.</li>
-               <li> Easy and simple UI & UX.</li>
-               <li> Sharable content on all your socials.</li>
-               <li> Syncs content across PCs and mobile devices.</li>
-               <li> Unlimited reading service available.</li>
+              </li>
+              <li>
+                <span>Passionate Contributors:</span><br /> Each member of our team is deeply passionate about manga. We're not just writers; we're avid readers who genuinely love the medium. This passion shines through in our reviews, recommendations, and discussions.
+             
+              </li>
+              <li>
+                <span>Transparency and Accessibility: </span><br />We believe in transparency and accessibility. Our team is approachable, and we value the input of our community. We're open to feedback, suggestions, and collaboration, making us an approachable and inclusive resource for manga enthusiasts.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Service section -->
+      <!-- <section id="service">
+        <div class="section-title">
+          <h2 class="sub-title">My Services</h2>
+          <h3 class="title">A brief of Offerting Services</h3>
+        </div>
+        <div class="services">
+          <div>
+            <i class="fa-brands fa-battle-net"></i>
+            <h2>Branding</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              fugit optio dolore.
+            </p>
+          </div>
+          <div>
+            <i class="fa-solid fa-globe"></i>
+            <h2>Print Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              fugit optio dolore.
+            </p>
+          </div>
+          <div>
+            <i class="fa-solid fa-laptop"></i>
+            <h2>Wordpress</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              fugit optio dolore.
+            </p>
+          </div>
+          <div>
+            <i class="fa-brands fa-pix"></i>
+            <h2>Graphic Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              fugit optio dolore.
+            </p>
+          </div>
+          <div>
+            <i class="fa-solid fa-lock"></i>
+            <h2>Cyber Security</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              fugit optio dolore.
+            </p>
+          </div>
+          <div>
+            <i class="fa-solid fa-laptop-code"></i>
+            <h2>Web Development</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              fugit optio dolore.
+            </p>
+          </div>
+        </div>
+      </section> -->
+      <!-- Portfolio section -->
+      <section id="portfolio">
+        <div class="section-title">
+          <h2 class="sub-title">My Manga Portfolio</h2>
+          <h3 class="title">Trending Mangas</h3>
+          <div class="project-list">
+            <div class="project">
+              <img src="images/OP.webp" alt="project1" />
+              <div class="layer">
+                <h3>ONE PIECE</h3>
+                <p>
+                  ONE PIECE is a japanese manga series written and<br>
+                  illustrated by eiichiro oda. It has been serialized in Shueisha's shōnen manga magazine Weekly  <br>
+                  Shōnen Jump since July 1997, with its individual chapters compiled into 106 tankōbon volumes as of July 2023.
                 </p>
-           </section>
+                <a href="/anime/op/chapters/watch.html"
+                  ><i class="fa fa-external-link" aria-hidden="true"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project">
+              <img src="images/JJK.jfif" alt="project2" />
 
-      
-       
-     <section class="latest-releases">
-        <h2>Is MangaVerse Safe To Read Manga Online?</h2>
-        <p>Reading manga is a time-consuming hobby and it should only be done on a safe and secure site. While most free manga sites are filled with ads and pop-ups, MangaVerse is completely ad-free. We are dedicated to bringing you a risk-free reading experience, therefore, no ads, pop-ups, or commercials are existent on the site. With no ad links, hackers have no way to pose a risk to your device and identity. By reading manga on MangaVerse, you can avoid the risk of serious headaches such as data loss, identity theft, corrupted networks, etc.
+              <div class="layer">
+                <h3>JUJUTSU KAISEN</h3>
+                <p>
+                  Jujutsu Kaisen is a Japanese manga series written and illustrated by Gege Akutami. It has been serialized in Shueisha's shōnen manga magazine Weekly Shōnen Jump since March 2018, with its chapters collected and published in 23 tankōbon volumes as of July 2023.
+                </p>
+                <a href="anime/jjk/chapters/watch.html"
+                  ><i class="fa fa-external-link" aria-hidden="true"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project">
+              <img src="images/KAGURA.jpg" alt="project3" />
+              <div class="layer">
+                <h3>KAGURABACHI</h3>
+                <p>
+                  Young Chihiro spends his days training under his famous swordsmith father. One day he hopes to become a great sword-maker himself. The goofy father and the serious son—they thought these days would last forever. But suddenly, tragedy strikes. A dark day soaked in blood. Chihiro and his blade now live only for revenge. Epic sword battle action!
+                </p>
+                <a href="anime/kagurabachi/watch.html"
+                  ><i class="fa fa-external-link" aria-hidden="true"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonial section -->
+      <section id="testimonial">
+        <div class="section-title">
+          <h2 class="sub-title">Testimonial</h2>
+          <h3 class="title">People What Are Saying</h3>
+          <div class="testimonial-list">
+            <div class="review">
+              <i class="fa-solid fa-quote-left"></i>
+              <p class="review-text">
+               ramro xa
+              </p>
+              <div class="review-by">
+                <div class="img">
+                  <img
+                    src="images/jjk.png"
+                    alt="testimonials-img-1"
+                  />
+                </div>
+                <div class="info">
+                  <h3 class="name">saracastic maniss</h3>
+                  <h5 class="resignation">Web Developer</h5>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <i class="fa-solid fa-quote-left"></i>
+              <p class="review-text">
+                babal
+              </p>
+              <div class="review-by">
+                <div class="img">
+                  <img
+                    src="images/OP.webp"
+                    alt="testimonials-img-2"
+                  />
+                </div>
+                <div class="info">
+                  <h3 class="name">Natasha Malkova</h3>
+                  <h5 class="resignation">Graphics Designer</h5>
+                </div>
+              </div>
+            </div>
+            <div class="review">
+              <i class="fa-solid fa-quote-left"></i>
+              <p class="review-text">
+              love it
+              </p>
+              <div class="review-by">
+                <div class="img">
+                  <img
+                    src="images/zoro.png"
+                    alt="testimonials-img-3"
+                  />
+                </div>
+                <div class="info">
+                  <h3 class="name">sarcaser Koney</h3>
+                  <h5 class="resignation">Digital Marketer</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact section -->
+      <section id="contact">
+        <div class="section-title">
+          <h2 class="sub-title">Contact</h2>
+          <h3 class="title">Get in Touch</h3>
+        </div>
+        <div class="content">
+          <div class="contact-left">
+            <form action="">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit">
+                Send Message <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+          <div class="vl"></div>
+          <div class="contact-right">
+            <div class="col address">
+              <i class="fa-solid fa-location-dot"></i>
+              <div class="info">
+                <h2 class="title">Address</h2>
+                <p>thamel Road, ratnapark ohio: 1217</p>
+              </div>
+            </div>
+            <div class="col phone">
+              <i class="fa-solid fa-phone"></i>
+              <div class="info">
+                <h2 class="title">Phone</h2>
+                <p>0404404</p>
+              </div>
+            </div>
+            <div class="col email">
+              <i class="fa-solid fa-envelope"></i>
+              <div class="info">
+                <h2 class="title">Email</h2>
+                <p>manishbhandari0444@gmail.com</p>
+              </div>
+            </div>
+            <!-- <div class="col website">
+              <i class="fa-solid fa-globe"></i>
+              <div class="info">
+                <h2 class="title">Website</h2>
+                <p>www.domain.com</p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            Copyright ©️ Mangaverse | Made with
+            <i class="fa-solid fa-heart"></i> by
+            <a href="#">VortexManiss</a>
+          </p>
+        </div>
+      </section>
+    </div>
 
-            MangaVerse does not require any registration or signup, meaning that users are not obliged to provide their information such as full name, email address, credit card details, etc to have full access to the site’s content library and features. With no information shared, there will be no information leaked, and your identity will also be kept safe. To sum it up, MangaVerse is the best and safest manga site that every manga lover should check out.</p>
-     </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 MangaVerse</p>
-    </footer>
+    <!-- Custom JS -->
     <script src="home.js"></script>
-</body>
+  </body>
 </html>

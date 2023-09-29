@@ -3,7 +3,7 @@
 :root{
     --red:#E50914;
     --black:#000000;
-    --light-color:#23072e;
+    --light-color:#170027;
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
 }
 
@@ -382,13 +382,13 @@ header .icons #menu-bars{
     border: none;
     cursor: pointer;
     font-size: 24px;
-    color: #f70000;
+    color: #817a7a;
     margin: 10px;
 }
 
 #mobile-nav {
     display: none;
-    background-color: #140325;
+    
     position: relative;
     height: 30px;
     top: 0px;
