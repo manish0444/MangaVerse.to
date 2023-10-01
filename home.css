@@ -510,6 +510,55 @@ img {
 .col .info .title {
   font-size: 20px;
 }
+#BeMember {
+  background-color:#714198;
+  padding: 60px 8% 40px;
+  text-align: center;
+}
+
+#BeMember .section-title .sub-title {
+  color: #011918;
+}
+
+#BeMember .content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+}
+
+.content .BeMember-left {
+  flex-basis: 50%;
+}
+
+.content .BeMember-left form {
+  width: 100%;
+}
+
+.BeMember-left form input,
+.BeMember-left form textarea,
+.BeMember-left form button {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #f7f7f7;
+  color: #120f2d;
+  resize: none;
+  font-size: 14px;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.BeMember-left form button {
+  background: #000000;
+  color: #f7f7f7;
+  font-weight: 500;
+  margin: 0;
+  border-radius: 0;
+  cursor: pointer;
+}
 
 .copyright {
   font-size: 16px;
