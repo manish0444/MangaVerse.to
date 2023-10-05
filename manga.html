@@ -242,11 +242,28 @@ background-color: #0d00ff;
                                 <i class="fas fa-arrow-right"></i>
                             </div>
                        </div>
+                      
+                    
 
                         <div id="Banners-container">
                             <div class="Image-Name">
-                                <img src="images/bleach.jpg" alt="">
-                                
+                                <img src="images/bleach.jpg" alt="" onclick="openPopup('images/bleach.jpg', 'Ichigo Kurosaki never asked for the ability to see ghosts-- he was born with the gift. When his family is attacked by a Hollow -- a malevolent lost soul -- Ichigo becomes a Soul Reaper, dedicating his life to protecting the innocent and helping the tortured spirits themselves find peace.', 'anime/bleach/')">
+                                <div id="imagePopup" class="popup">
+                                    <div class="popup-content">
+                                        <img id="popupImage" src="" alt="">
+                                        <p id="popupText"> </p>
+                                        
+                                        <a id="popupReadButton" href="#" class="btn">READ</a>
+                                        <div class="content-type">
+                                            <span class="action">Action</span>
+                                            <span class="adventure">Adventure</span>
+                                        </div>
+                                        <div class="show-name">
+                                            BLEACH
+                                        </div>
+                                    </div>
+                                    <span class="close-popup" onclick="closePopup()">&times;</span>
+                                </div>
                                 <span class="ep">06/16</span>
                                 <span class="comments"><i class="fas fa-comments"></i>11</span>
                                 <span class=""><i class="far fa-eye"></i> 9987</span>
@@ -550,7 +567,19 @@ background-color: #0d00ff;
                         </div>
                        
 
-                       
+                       <script>
+                        function openPopup(imageSrc, text, readUrl) {
+    document.getElementById("popupImage").src = imageSrc;
+    document.getElementById("popupText").textContent = text;
+    document.getElementById("popupReadButton").href = readUrl;
+    document.getElementById("imagePopup").style.display = "block";
+}
+
+function closePopup() {
+    document.getElementById("imagePopup").style.display = "none";
+}
+
+                       </script>
                
 
                        
@@ -724,6 +753,49 @@ body{
 /* Show section */
 
 
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    text-align: center;
+}
+
+/* .popup-content {
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+} */
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.popup-content {
+    background-color: transparent; /* Set background to transparent */
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for better visibility */
+}
+
+#popupText {
+    color: #ff0000; /* Change text color to white */
+}
 
 
 /* News section */
