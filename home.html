@@ -311,7 +311,7 @@
         </div>
         <div class="content">
           <div class="contact-left">
-            <form action="">
+            <form action="process_contact.php" method="post">
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
@@ -362,122 +362,77 @@
           </div>
         </div>
         
-        <section id="BeMember" >
-        <div class="section-title">
-          <h2 class="sub-title">Become a Member</h2>
-          <h3 class="title">Be part of us</h3>
-        </div>
-        <div class="content">
-          <div class="contact-left">
-            <form action="">
+      
+
+<section id="BeMember">
+  <div class="section-title">
+      <h2 class="sub-title">Become a Member</h2>
+      <h3 class="title">Be part of us</h3>
+  </div>
+  <div class="content">
+      <div class="contact-left">
+          <form action="process_registration.php" method="post">
               <div class="form-group">
-                <label for="">username</label>
-                <i class="fas fa-user"></i>
-                <input type="text,number" required>
-            </div>
-            <div class="form-group">
-              <label for="">email</label>
-              <i class="fas fa-at"></i>
-              <input type="email" required>
-            </div>
-            <div class="form-group">
-              <label for="">password</label>
-              <i class="fas fa-lock"></i>
-              <input type="password" required>
-            </div>
-            <div class="form-group">
-              <label for="">confirm password</label>
-              <i class="fas fa-lock"></i>
-              <input type="password" required>
-              <button type="submit">
-               Be Member <i class="fa-solid fa-arrow-right" ></i>
-               
-              </button>
-             
-            </form>
-          
-          </div>
-         <div class="already">
+                  <label for="username">Username</label>
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="username" name="username" required>
+              </div>
+              <div class="form-group">
+                  <label for="email">Email</label>
+                  <i class="fas fa-at"></i>
+                  <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                  <label for="password">Password</label>
+                  <i class="fas fa-lock"></i>
+                  <input type="password" id="password" name="password" required>
+              </div>
+              <div class="form-group">
+                  <label for="confirm-password">Confirm Password</label>
+                  <i class="fas fa-lock"></i>
+                  <input type="password" id="confirm-password" name="confirm-password" required>
+                  <button type="submit">Be Member <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+          </form>
+      </div>
+      <div class="already">
           <a href="#Member">Already a member??</a>
-         </div>
-         <style>
-          /* Style for the "already" class */
-          .already {
-              /* You can define other styles for the <div> here */
-          }
-  
-          /* Style for the link inside the "already" class */
-          .already a {
-              color: #ff0000; /* Set the default text color */
-              text-decoration: none; /* Remove the underline */
-          }
-  
-          /* Change the text color on hover */
-          .already a:hover {
-              color: #1d0074; /* Change the text color to blue on hover */
-          }
-      </style>
-   <section id="Member" >
-        <div class="section-title">
-          <h2 class="sub-title">Already a Member</h2>
-          <h3 class="title">sign-in to become<br>
-          a part of us again</h3>
-        </div>
-        <div class="content">
-          <div class="contact-left">
-            <form action="">
+      </div>
+  </div>
+</section>
+
+<section id="Member">
+  <div class="section-title">
+      <h2 class="sub-title">Already a Member</h2>
+      <h3 class="title">Sign in to become a part of us again</h3>
+  </div>
+  <div class="content">
+      <div class="contact-left">
+          <form action="process_login.php" method="post">
               <div class="form-group">
-                <label for="">username</label>
-                <i class="fas fa-user"></i>
-                <input type="text,number" required>
-            </div>
-            <div class="form-group">
-              <label for="">email</label>
-              <i class="fas fa-at"></i>
-              <input type="email" required>
-            </div>
-           
-            <div class="form-group">
-              <label for=""> password</label>
-              <i class="fas fa-lock"></i>
-              <input type="password" required>
-              <button type="submit">
-               Be Member <i class="fa-solid fa-arrow-right" ></i>
-               
-              </button>
-              <div class="already">
-                <a href="#BeMember">Haven't joined yet??</a>
-               </div>
-               <style>
-                /* Style for the "already" class */
-                .already {
-                    /* You can define other styles for the <div> here */
-                }
-        
-                /* Style for the link inside the "already" class */
-                .already a {
-                    color: #ff0000; /* Set the default text color */
-                    text-decoration: none; /* Remove the underline */
-                }
-        
-                /* Change the text color on hover */
-                .already a:hover {
-                    color: #1d0074; /* Change the text color to blue on hover */
-                }
-                </style>
-            </form>
-            <div class="copyright">
-              <p>
-                Copyright ©️ Mangaverse | Made with
-                <i class="fa-solid fa-heart"></i> by
-                <a href="#">VortexManiss</a>
-              </p>
-            </div>
-        
-       
-       
-      </section>
-    </div>
+                  <label for="login-username">Username</label>
+                  <i class="fas fa-user"></i>
+                  <input type="text" id="login-username" name="login-username" required>
+              </div>
+              <div class="form-group">
+                  <label for="login-email">Email</label>
+                  <i class="fas fa-at"></i>
+                  <input type="email" id="login-email" name="login-email" required>
+              </div>
+              <div class="form-group">
+                  <label for="login-password">Password</label>
+                  <i class="fas fa-lock"></i>
+                  <input type="password" id="login-password" name="login-password" required>
+                  <button type="submit">Login <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+          </form>
+          <div class="already">
+              <a href="#BeMember">Haven't joined yet??</a>
+          </div>
+      </div>
+  </div>
+</section> 
+   
     <div class="max-w-xs w-80 lg:w-auto py-3 shadow-lg rounded-lg m-4 bg-wash dark:bg-gray-95 px-4 flex">
       <p class="w-full font-bold text-primary dark:text-primary-dark text-lg me-4">Is this page useful?</p>
       <button aria-label="Yes" class="bg-secondary-button dark:bg-secondary-button-dark rounded-lg text-primary dark:text-primary-dark px-3 me-2">
