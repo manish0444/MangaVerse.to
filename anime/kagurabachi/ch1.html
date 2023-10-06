@@ -68,7 +68,7 @@ img {vertical-align: middle;}
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #ff0000;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -77,6 +77,46 @@ img {vertical-align: middle;}
 .active, .dot:hover {
   background-color: #748481;
 }
+.download{
+    max-width: 800px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    justify-content:center;
+    margin-top: 2rem;
+
+}
+
+.download h2{
+    text-align:center;
+    font-size: 2.7rem;
+    font-weight: 500;
+    margin:1.6rem 0;
+    color: #ff0000;
+}
+
+.downlod-links{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px;
+    margin-bottom: 2rem;
+}
+
+.downlod-links a{
+    text-align:center;
+    background: var(--red);
+    padding:12px 20px;
+    color: #ff0000;
+    letter-spacing:1px;
+    font-size: 500;
+}
+
+.downlod-links a:hover{
+    background: var(--black);
+    color: var(--red);
+    transition: 0.3s all linear;
+}
+
 
 /* Fading animation */
 .fade {
@@ -529,6 +569,15 @@ img {vertical-align: middle;}
 }
 
 </style>
+<div class="download">
+  <h2>Download links</h2>
+  <div class="downlod-links">
+      <a href="manga/1/Image to PDF 20230927 15.45.00.pdf">For Android</a>
+      <a href="manga/1/Image to PDF 20230927 15.45.00.pdf">For IOS</a>
+      <a href="manga/1/Image to PDF 20230927 15.45.00.pdf">For Windows</a>
+  </div>
+</div>
+
 
 
 
