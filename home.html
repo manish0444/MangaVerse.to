@@ -364,7 +364,34 @@
           </div>
         </div>
         
-      
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+              var form = document.getElementById("contact-form"); // Replace with your form ID
+              form.addEventListener("submit", function (event) {
+                  event.preventDefault(); // Prevent the form from submitting in the traditional way
+          
+                  var formData = new FormData(form);
+          
+                  // Make an AJAX request to Formspree
+                  var xhr = new XMLHttpRequest();
+                  xhr.open("POST", "https://formspree.io/manishbhandari0444@gmail.com"); // Replace with your Formspree endpoint
+                  xhr.setRequestHeader("Accept", "application/json");
+                  xhr.onreadystatechange = function () {
+                      if (xhr.readyState === 4) {
+                          if (xhr.status === 200) {
+                              // Success message
+                              alert("Message sent successfully!");
+                          } else {
+                              // Error message
+                              alert("Message could not be sent.");
+                          }
+                      }
+                  };
+                  xhr.send(formData);
+              });
+          });
+          </script>
+          
 
 <section id="BeMember">
   <div class="section-title">
