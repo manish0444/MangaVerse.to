@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("searchInput");
     const contentBanners = document.getElementById("Banners-container");
 
+
     // Store the original content
     const originalContent = Array.from(contentBanners.children);
 
@@ -120,5 +121,28 @@ document.addEventListener("DOMContentLoaded", function () {
     searchInput.addEventListener("input", function () {
         const searchTerm = searchInput.value;
         filterContent(searchTerm);
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    var scrollToTopButton = document.getElementById("scrollToTopButton");
+
+    // Function to check if the page is scrolled down enough to show the button
+    function toggleScrollToTopButton() {
+        if (window.scrollY > 300) { // Adjust this value as needed
+            scrollToTopButton.style.display = "block";
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
+    }
+
+    // Add scroll event listener to toggle the button
+    window.addEventListener("scroll", toggleScrollToTopButton);
+
+    // Add click event listener to scroll to the top when the button is clicked
+    scrollToTopButton.addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Smooth scrolling animation
+        });
     });
 });
