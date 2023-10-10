@@ -68,7 +68,7 @@ img {
   content: "";
   width: 0;
   height: 2px;
-  background: #a7a1f7;
+  background: #ff0000;
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -128,7 +128,8 @@ img {
 }
 
 .bottom-left .btn-cv:hover {
-  background-color: #fff;
+  background-color: #000000;
+  color: #ff0000;
   transform: scale(1.1);
 }
 
@@ -145,8 +146,8 @@ img {
 }
 
 .header-bottom .bottom-right a:hover {
-  border: 1px solid #f2f2fe;
-  color:#bcbad5;
+  border: 1px solid #ff0000;
+  color:#00f7ff;
   opacity: 1;
   transform: scale(1.1);
 }
@@ -365,7 +366,6 @@ img {
   color: #000000;
   border: 2px solid #fff;
 }
-
 /* Testimonial */
 #testimonial {
   padding: 60px 4% 80px;
@@ -392,7 +392,7 @@ img {
 
 .review i {
   font-size: 54px;
-  color:#655fbf;
+  color: #655fbf;
 }
 
 .review .review-text {
@@ -434,6 +434,60 @@ img {
   font-weight: 500;
   opacity: 0.8;
 }
+
+/* Leave a Comment Section Styles */
+.leave-comment {
+  margin-top: 50px;
+  text-align: center;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 90px;
+}
+
+.leave-comment h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.leave-comment form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.leave-comment .form-group {
+  margin-bottom: 20px;
+}
+
+.leave-comment label {
+  font-weight: bold;
+  text-align: left;
+}
+
+.leave-comment input[type="text"],
+.leave-comment textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #0800ff;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.leave-comment button[type="submit"] {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.leave-comment button[type="submit"]:hover {
+  background-color: #000000;
+  color: #ff0000;
+}
+
 
 /* Contact */
 #contact {
@@ -579,7 +633,7 @@ img {
 @media (max-width: 900px) {
   .nav-menu .fa-solid {
     display: block;
-    color:#9100d4;
+    color:#ff0000;
     font-size: 20px;
   }
 
@@ -600,7 +654,7 @@ img {
 
   .nav-menu ul li {
     display: block;
-    color:#8923ff;
+    color:#00eeff;
     margin: 25px;
   }
 
@@ -748,4 +802,9 @@ img {
   border-radius: 50%;
   padding: 10px 15px;
   cursor: pointer;
+}
+.scroll-to-top-button:hover{
+  background-color: #000000;
+  color: #ff0000;
+  transform: scale(1.1);
 }

@@ -72,6 +72,7 @@ header{
     background: var(--black);
     color: var(--red);
     letter-spacing: .1rem;
+     transform: scale(1.1);
 }
 
 header .logo{
@@ -406,7 +407,9 @@ header .icons #menu-bars{
 
 
 #mobile-nav a:hover {
-    background-color: #555;
+    background-color: #000000;
+    color: #ff0000;
+    transform: scale(1.1);
 }
 
 #mobile-nav.active {
@@ -551,7 +554,7 @@ iframe {
   }
   
   .centered-hover:hover::after {
-    transform: scaleX(1); /* Expand on hover */
+    transform: scaleX(1.1); /* Expand on hover */
     transform-origin: bottom left;
   }
   
@@ -566,4 +569,10 @@ iframe {
     border-radius: 50%;
     padding: 10px 15px;
     cursor: pointer;
+    
+}
+.scroll-to-top-button:hover{
+    background-color: #000000;
+    color: #ff0000;
+    transform: scale(1.1);
 }
