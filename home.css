@@ -89,10 +89,10 @@ img {
     url(images/zorogirl.png);
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #ffffff;
   padding: 8% 6% 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
